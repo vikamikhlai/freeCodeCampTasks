@@ -1,0 +1,16 @@
+function sumPrimes(num) {
+    let primes = [];
+    for (let i = 2; i <= num; i++) {
+      if (primes.every((prime) => i % prime !== 0))
+        primes.push(i);
+    }
+    return primes.reduce((sum, prime) => sum + prime, 0);
+  }
+  
+  sumPrimes(10);
+
+  //TESTS
+
+//   sumPrimes(10) should return a number.
+// Passed:sumPrimes(10) should return 17.
+// Passed:sumPrimes(977) should return 73156.
